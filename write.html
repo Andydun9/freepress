@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Free Press</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="scripts.js"></script>
+    <script src="wysiwyg.js"></script>
+</head>
+<header>
+<h1>The Free Press</h1>
+<button>login</button>
+</header>
+<body onload="iframe()">
+<h2>Create Your Own Article</h2>
+
+
+<form for="ArticleCategories">
+<label>Article Category</label>
+<select name="ArticleCategories">
+<option value="na">Choose Category</option>
+<option value="politics">Politics</option>
+<option value="finance">Finance</option>
+<option value="sports">Sports</option>
+<option value="pop">Pop Culture &amp Music</option>
+<option value="satire">Satire</option>
+</select>
+</form>
+
+<form class="heading">
+<label for=Title>Article Title</label>
+<input type="text">
+</form>
+
+<div class="article">
+
+<form>
+<label for="image">Upload Image</label>
+<input type="text" id="image">
+</form>
+<button class="imgComputer">Browse</button>
+
+<h3>Content</h3>
+
+<form method="post" action="submit.php" id="rtf">
+    <input type="button" value="B" onclick="bold()">
+    <input type="button" value="I" onclick="italic()">
+    <input type="button" value="U" onclick="underline()">
+    <input type="button" value="Size" onclick="fontsize()">
+    <input type="button" value="Font Color" onclick="fontcolor()">
+    <input type="button" value="High Light" onclick="highlight()">
+    <input type="button" value="Link" onclick="link()">
+    <input type="button" value="Unlink" onclick="unlink()">
+<br><br>
+    <textarea name="textarea" id="textarea" style= "display: none;"></textarea>
+    <iframe name="editor" id="editor" style="width: 1000; height: 1500;"></iframe>
+<br><br>
+    <input type="button" onclick="formsubmit()" value="Post">
+    </form>
+
+</div>
+
+</body>
